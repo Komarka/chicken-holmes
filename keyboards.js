@@ -87,5 +87,4 @@ const BUDGET_KEYBOARD  =  [
     BUDGET_KEYBOARD,
     CITY_KEYBOARD,
     EVENT_TYPE_KEYBOARD,
-    EVENT_DATE_KEYBOARD: helpers.generateEventTypeKeyboard(),
 }

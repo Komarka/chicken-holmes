@@ -14,7 +14,7 @@ const generateDateInProperFormat = (dd) => {
     return `${dd}.${mm}.${yyyy}`;
   }
 
-  const generateEventTypeKeyboard = () => {
+  const generateEventCalendarKeyboard = () => {
     const keyboardChunkArray1 = [];
     const keyboardChunkArray2 = [];
     const keyboardChunkArray3 = [];
@@ -87,6 +87,6 @@ const generateDateInProperFormat = (dd) => {
   module.exports = {
     generateDateInProperFormat,
     parsedDataToMergedEntity,
-    generateEventTypeKeyboard,
+    generateEventCalendarKeyboard,
     handleNotFoundResponse,
 }

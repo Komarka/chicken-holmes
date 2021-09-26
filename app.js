@@ -33,7 +33,6 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(chatId, messages.WELCOME_MESSAGE);
 
     setTimeout(() => {
-const messages = require('./messages');
        bot.sendMessage(chatId, messages.BUDGET_MESSAGE, {
             reply_markup: {
                 inline_keyboard: keyboards.BUDGET_KEYBOARD,
@@ -74,9 +73,9 @@ bot.onText(/\/category/, (msg) => {
 // /CALENDAR event handler
 bot.onText(/\/calendar/, (msg) => {
   const chatId = msg.chat.id;
-  bot.sendMessage(chatId, messages.EVENT_DATE_KEYBOARD, {
+  bot.sendMessage(chatId, messages.CALENDAR_MESSAGE, {
     reply_markup: {
-        inline_keyboard: keyboards.EVENT_DATE_KEYBOARD,
+        inline_keyboard: helpers.generateEventCalendarKeyboard(),
      }
   })
 })
@@ -94,9 +93,9 @@ bot.onText(/\/city/, (msg) => {
 // /BUDGET event handler
 bot.onText(/\/budget/, (msg) => {
   const chatId = msg.chat.id;
-  bot.sendMessage(chatId, messages.CITY_MESSAGE, {
+  bot.sendMessage(chatId, messages.BUDGET_MESSAGE, {
     reply_markup: {
-        inline_keyboard: keyboards.CITY_KEYBOARD,
+        inline_keyboard: keyboards.BUDGET_KEYBOARD,
      }
   })
 })
@@ -125,7 +124,7 @@ bot.on('callback_query', (query) => {
     } else if (!store.eventDate) {
       bot.sendMessage(chatId, messages.CALENDAR_MESSAGE, {
         reply_markup: {
-            inline_keyboard: keyboards.EVENT_DATE_KEYBOARD,
+            inline_keyboard: helpers.generateEventCalendarKeyboard(),
          },
     });
     } else if (!store.eventType) {
