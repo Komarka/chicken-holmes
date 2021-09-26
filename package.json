@@ -1,0 +1,22 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "input": "^1.0.1",
+    "jshint": "^2.13.0",
+    "node-telegram-bot-api": "0.54.0",
+    "osmosis": "^1.1.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
